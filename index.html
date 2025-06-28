@@ -1,19 +1,28 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content=device-width, initial-scale=1.0">
-  <title>Alpha Trader</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Alpha Trader PRO</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="painel">
-    <h1>Alpha Trader 🔥</h1>
-    <p>Sinais automáticos de compra e venda com leitura do gráfico em tempo real.</p>
-    <div id="grafico">📊 Gráfico de 1 minuto aqui...</div>
-    <div id="sinal">⏳ Aguardando próximo sinal...</div>
-  </div>
-  <script src="script.js"></script>
+    <div class="login-screen" id="loginScreen">
+        <h1>Alpha Trader PRO 🔒</h1>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+    </div>
+    <div class="main" id="mainPanel" style="display:none;">
+        <header>
+            <h2>Alpha Trader PRO</h2>
+        </header>
+        <section>
+            <div id="signalArea">📊 Analisando gráfico de 1 minuto...</div>
+            <div id="history"><h3>Histórico de Sinais</h3><ul id="historyList"></ul></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
